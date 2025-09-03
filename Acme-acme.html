@@ -1,0 +1,374 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Basic SEO -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Acme-Samrt — Smart Solutions for the Web</title>
+  <meta name="description" content="Acme-Samrt builds fast, responsive, SEO‑friendly websites with modern design and full monetization support." />
+  <link rel="canonical" href="https://www.acme123@gmail.com/" />
+  <meta name="robots" content="index,follow" />
+  
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Acme-Samrt — Smart Solutions for the Web" />
+  <meta property="og:description" content="Fast, responsive, SEO‑friendly websites with full monetization support." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.acme123@gmail.com/" />
+  <meta property="og:image" content="https://www.acme123@gmail.com/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Acme-Samrt — Smart Solutions for the Web" />
+  <meta name="twitter:description" content="Fast, responsive, SEO‑friendly websites with full monetization support." />
+  <meta name="twitter:image" content="https://www.example.com/og-image.jpg" />
+  
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Acme-Samrt",
+    "url": "https://www.example.com/",
+    "description": "Acme-Samrt builds fast, responsive, SEO‑friendly websites with modern design and monetization.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Acme-Samrt",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.example.com/logo.png"
+      }
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.example.com/search?q={query}",
+      "query-input": "required name=query"
+    }
+  }
+  </script>
+  
+  <!-- Google AdSense (Monetization) -->
+  <!-- Replace with your AdSense Publisher ID -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+  
+  <!-- Google Analytics 4 (optional) -->
+  <!-- Replace G-XXXXXXXXXX with your GA Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} 
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  
+  <!-- Styles -->
+  <style>
+    :root{
+      --bg:#0b1020; --fg:#e8ecf1; --muted:#a7b0bd; --brand:#6ee7b7; --brand-2:#60a5fa; --card:#121935;
+      --radius:16px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial;color:var(--fg);background:linear-gradient(180deg,#0b1020,#0b1020 60%,#0e1530)}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(1100px,92%);margin-inline:auto}
+    
+    /* Header */
+    header{position:sticky;top:0;z-index:20;background:rgba(11,16,32,.7);backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:.75rem 0}
+    .logo{display:flex;align-items:center;gap:.6rem;font-weight:800}
+    .logo .mark{width:28px;height:28px;border-radius:8px;background:conic-gradient(from 180deg,var(--brand),var(--brand-2));box-shadow:0 0 0 3px rgba(255,255,255,.06)}
+    .menu{display:flex;gap:1rem;align-items:center}
+    .menu a{padding:.5rem .75rem;border-radius:12px;color:var(--muted)}
+    .menu a[aria-current="page"], .menu a:hover{color:var(--fg);background:rgba(255,255,255,.06)}
+    .cta{padding:.6rem 1rem;border-radius:999px;background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#05111a;font-weight:700}
+    .burger{display:none;background:none;border:0;color:var(--fg);font-size:1.6rem}
+    
+    /* Hero */
+    .hero{display:grid;gap:2rem;grid-template-columns:1.1fr .9fr;align-items:center;padding:5rem 0}
+    .badge{display:inline-flex;align-items:center;gap:.5rem;border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:.3rem .6rem;color:var(--muted)}
+    .headline{font-size:clamp(2rem,6vw,3.2rem);line-height:1.15;margin:.6rem 0 1rem}
+    .lead{color:var(--muted);max-width:55ch}
+    .hero-card{background:radial-gradient(1200px 600px at 20% -10%,rgba(96,165,250,.15),transparent 50%),var(--card);padding:1rem;border-radius:var(--radius);border:1px solid rgba(255,255,255,.06);box-shadow:0 10px 30px rgba(0,0,0,.35)}
+    .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    .kpi{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);padding:1rem;border-radius:14px;text-align:center}
+    .kpi strong{font-size:1.4rem}
+    
+    /* Sections */
+    section{padding:4rem 0}
+    .section-title{font-size:1.6rem;margin:0 0 1rem}
+    .grid-3{display:grid;gap:1rem;grid-template-columns:repeat(3,1fr)}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:1.25rem}
+    .card h3{margin:.25rem 0 .5rem}
+    
+    /* Ads */
+    .ad{display:block;text-align:center;margin:1rem auto;background:rgba(255,255,255,.03);border:1px dashed rgba(255,255,255,.2);border-radius:12px;padding:1rem}
+    
+    /* Footer */
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:2rem 0;color:var(--muted)}
+    .footer-grid{display:grid;gap:1rem;grid-template-columns:2fr 1fr 1fr}
+    .footer-grid a{color:var(--muted)}
+    
+    /* Responsive */
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr}
+      .hero-grid{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr}
+      .menu{display:none;position:absolute;top:58px;right:4%;left:4%;flex-direction:column;background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:.5rem}
+      .menu.show{display:flex}
+      .burger{display:block}
+    }
+  </style>
+  
+  <link rel="icon" href="/favicon.ico" />
+</head>
+
+<body>
+  <!-- Skip Link -->
+  <a href="#main" class="sr-only" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden">Skip to content</a>
+  
+  <header role="banner">
+    <nav class="container nav" aria-label="Primary">
+      <a href="#home" class="logo" aria-label="Go to homepage">
+        <span class="mark" aria-hidden="true"></span>
+        <span>Acme-Samrt</span>
+      </a>
+      <button class="burger" aria-controls="menu" aria-expanded="false" id="burger">☰</button>
+      <div class="menu" id="menu" role="menubar">
+        <a href="#services" role="menuitem">Services</a>
+        <a href="#work" role="menuitem">Work</a>
+        <a href="#pricing" role="menuitem">Pricing</a>
+        <a href="#faq" role="menuitem">FAQ</a>
+        <a href="#contact" role="menuitem" class="cta">Contact</a>
+      </div>
+    </nav>
+  </header>
+  
+  <main id="main" class="container">
+    <section id="home" class="hero">
+      <div>
+        <span class="badge">✅ SEO • ⚡ Performance • 📈 Monetization</span>
+        <h1 class="headline">Launch a blazing‑fast, SEO‑ready homepage with built‑in monetization</h1>
+        <p class="lead">This template gives you a production‑ready starting point: semantic HTML, structured data, Open Graph, responsive layout, accessible navigation, lazy images, AdSense placeholders, and analytics.</p>
+        <p style="display:flex;gap:.75rem;flex-wrap:wrap;margin:1.25rem 0 0">
+          <a href="#pricing" class="cta">Get Started</a>
+          <a href="#services" class="badge">See Features</a>
+        </p>
+      </div>
+      <aside class="hero-card" aria-label="Highlights">
+        <div class="hero-grid">
+          <div class="kpi"><strong>95–100</strong><div>Lighthouse SEO</div></div>
+          <div class="kpi"><strong><span title="Cumulative Layout Shift">Low CLS</span></strong><div>Smooth UX</div></div>
+          <div class="kpi"><strong>Responsive</strong><div>Mobile‑first</div></div>
+          <div class="kpi"><strong>Ad‑Ready</strong><div>AdSense slots</div></div>
+        </div>
+        <div class="ad" aria-label="Ad slot">
+          <!-- In-article Responsive Ad Example -->
+          <ins class="adsbygoogle"
+               style="display:block"
+               data-ad-client="ca-pub-XXXXXXXXXXXXXXX"
+               data-ad-slot="0000000000"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+          <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+          <small style="color:var(--muted)">Ad placeholder (replace IDs)</small>
+        </div>
+      </aside>
+    </section>
+    
+    <section id="services" aria-labelledby="services-title">
+      <h2 class="section-title" id="services-title">What you get</h2>
+      <div class="grid-3">
+        <article class="card">
+          <h3>SEO Foundation</h3>
+          <p>Clean semantics, meta tags, canonical URL, sitemap & robots guidelines, and JSON‑LD. Ready for Google Search Console.</p>
+          <ul>
+            <li>Meta + Open Graph</li>
+            <li>Schema.org WebSite</li>
+            <li>Fast load, lazy media</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Responsive Design</h3>
+          <p>Mobile‑first grid, accessible color contrast, and keyboard‑friendly navigation.</p>
+          <ul>
+            <li>Sticky header</li>
+            <li>Smooth scroll</li>
+            <li>Touch‑ready menu</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Monetization Ready</h3>
+          <p>Pre‑wired Google AdSense blocks, affiliate link zones, and analytics tracking.</p>
+          <ul>
+            <li>Responsive ads</li>
+            <li>Analytics hooks</li>
+            <li>Conversion CTAs</li>
+          </ul>
+        </article>
+      </div>
+      <div class="ad" aria-label="Ad slot">
+        <!-- Horizontal Ad Example -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXX"
+             data-ad-slot="1111111111"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+        <small style="color:var(--muted)">Ad placeholder (replace IDs)</small>
+      </div>
+    </section>
+
+    <section id="work" aria-labelledby="work-title">
+      <h2 class="section-title" id="work-title">Featured work</h2>
+      <div class="grid-3">
+        <a class="card" href="/case-studies/site-speed.html">
+          <img src="https://images.unsplash.com/photo-1522071901873-411886a10004?q=80&w=1200&auto=format&fit=crop" alt="Analytics dashboard on a laptop" loading="lazy" width="1200" height="800" />
+          <h3>Site Speed Boost</h3>
+          <p>How we pushed a client from 45 to 98 performance.</p>
+        </a>
+        <a class="card" href="/case-studies/seo-lift.html">
+          <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop" alt="Code editor screen" loading="lazy" width="1200" height="800" />
+          <h3>SEO Lift</h3>
+          <p>+220% organic traffic in 90 days.</p>
+        </a>
+        <a class="card" href="/case-studies/affiliate-rev.html">
+          <img src="https://images.unsplash.com/photo-1553729784-e91953dec042?q=80&w=1200&auto=format&fit=crop" alt="Ecommerce packaging" loading="lazy" width="1200" height="800" />
+          <h3>Affiliate Revenue</h3>
+          <p>Ad + affiliate hybrid that works on mobile.</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="pricing" aria-labelledby="pricing-title">
+      <h2 class="section-title" id="pricing-title">Simple pricing</h2>
+      <div class="grid-3">
+        <article class="card">
+          <h3>Starter</h3>
+          <p><strong>$0</strong> — Use this template as‑is.</p>
+          <ul>
+            <li>SEO + Ads placeholders</li>
+            <li>Responsive layout</li>
+            <li>MIT License</li>
+          </ul>
+          <p><a class="cta" href="#contact">Use Template</a></p>
+        </article>
+        <article class="card">
+          <h3>Pro</h3>
+          <p><strong>$5</strong> — Custom branding & setup.</p>
+          <ul>
+            <li>Brand colors & logo</li>
+            <li>AdSense / GA setup</li>
+            <li>Speed tuning</li>
+          </ul>
+          <p><a class="cta" href="#contact">Go Pro</a></p>
+        </article>
+        <article class="card">
+          <h3>Business</h3>
+          <p><strong>$4</strong> — Full site package.</p>
+          <ul>
+            <li>5 pages + blog</li>
+            <li>On‑page SEO</li>
+            <li>Search Console</li>
+          </ul>
+          <p><a class="cta" href="#contact">Start Now</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="faq" aria-labelledby="faq-title">
+      <h2 class="section-title" id="faq-title">FAQ</h2>
+      <details class="card"><summary>How do I enable AdSense?</summary>
+        <p>Replace all occurrences of <code>ca-pub-XXXXXXXXXXXXXXX</code> and each <code>data-ad-slot</code> with your IDs from Google AdSense. Verify your domain in AdSense and wait for approval.</p>
+      </details>
+      <details class="card"><summary>Is this SEO‑friendly?</summary>
+        <p>Yes. It uses semantic HTML, meta tags, canonical link, Open Graph/Twitter cards, JSON‑LD, and fast loading practices.</p>
+      </details>
+      <details class="card"><summary>Can I add a blog?</summary>
+        <p>Yes. Link your blog at <code>/blog/</code> and generate an RSS feed. Add <code>BlogPosting</code> schema to posts for rich results.</p>
+      </details>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 class="section-title" id="contact-title">Contact us</h2>
+      <div class="grid-3">
+        <form class="card" action="https://formspree.io/f/your-form-id" method="POST">
+          <label for="name">Name</label>
+          <input id="name" name="name" required style="width:100%;padding:.6rem;border-radius:10px;border:1px solid rgba(255,255,255,.15);background:#0b1125;color:var(--fg);margin:.35rem 0 1rem" />
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required style="width:100%;padding:.6rem;border-radius:10px;border:1px solid rgba(255,255,255,.15);background:#0b1125;color:var(--fg);margin:.35rem 0 1rem" />
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required style="width:100%;padding:.6rem;border-radius:10px;border:1px solid rgba(255,255,255,.15);background:#0b1125;color:var(--fg);margin:.35rem 0 1rem"></textarea>
+          <button class="cta" type="submit">Send</button>
+          <p style="color:var(--muted);margin-top:.75rem">This form posts to Formspree (replace <code>your-form-id</code>).</p>
+        </form>
+        <div class="card">
+          <h3>Affiliate spotlight</h3>
+          <p>Example affiliate blurb with a CTA. Replace with your partner links.</p>
+          <p><a class="cta" href="https://affiliate.example.com/?ref=your-id" rel="sponsored noopener" target="_blank">Try Partner →</a></p>
+          <small style="color:var(--muted)">Use <code>rel="sponsored"</code> for compliance.</small>
+        </div>
+        <div class="card">
+          <h3>Business info</h3>
+          <ul>
+            <li>Email: hello@example.com</li>
+            <li>Phone: +91 9697600923</li>
+            <li>Address: kashmir,jammu.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="container" role="contentinfo">
+    <div class="footer-grid">
+      <div>
+        <strong class="logo" style="gap:.5rem"><span class="mark"></span>Acme-Samrt</strong>
+        <p style="max-width:60ch">We build performant, monetized websites that search engines and users love.</p>
+        <nav aria-label="Footer">
+          <a href="/privacy.html">Privacy</a> ·
+          <a href="/terms.html">Terms</a> ·
+          <a href="/sitemap.xml">Sitemap</a>
+        </nav>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#work">Case Studies</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/guides/seo-basics.html">SEO Guide</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin-top:1rem">© <span id="year"></span> Acme-Samrt. All rights reserved.</p>
+  </footer>
+  
+  <!-- Minimal JS -->
+  <script>
+    // Mobile menu toggle
+    const burger = document.getElementById('burger');
+    const menu = document.getElementById('menu');
+    burger.addEventListener('click', () => {
+      const open = menu.classList.toggle('show');
+      burger.setAttribute('aria-expanded', String(open));
+    });
+    // Current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  
+  <!-- Performance hints for your server (not functional in static HTML):
+    • Serve a sitemap at /sitemap.xml and robots at /robots.txt
+    • Preconnect to ads/analytics origins and host critical assets locally.
+    • Use HTTP/2 + compression + long cache TTL with immutable asset hashes.
+  -->
+</body>
+</html>
